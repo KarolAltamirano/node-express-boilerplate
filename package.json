@@ -1,1 +1,49 @@
-{}
+{
+  "name": "nodeExpressBoilerplate",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/bin/main.js",
+  "scripts": {
+    "start": "better-npm-run start",
+    "clean": "rimraf dist",
+    "lint": "eslint 'src/**'",
+    "dev": "better-npm-run dev",
+    "build": "better-npm-run build"
+  },
+  "betterScripts": {
+    "start": {
+      "command": "node dist/bin/main.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "dev": {
+      "command": "npm run clean && nodemon --exec babel-node -- src/bin/main.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "build": {
+      "command": "npm run clean && babel src -d dist",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "express-history-api-fallback": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.11.4",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "better-npm-run": "0.0.9",
+    "eslint": "^3.1.1",
+    "nodemon": "^1.9.2",
+    "rimraf": "^2.5.4"
+  }
+}
