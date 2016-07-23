@@ -5,17 +5,19 @@ import http from 'http';
 
 import app from '../app';
 
+// set port from environment
 app.set('port', process.env.PORT || 5000);
 
+// create logger
 var log = debug('myapp:server');
 
+// create HTTP server
 var server = http.createServer(app);
 
+// set HTTP server event listener
 server.on('listening', () => {
-    var addr = server.address(),
-        bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
-
-    log('Listening on ' + bind);
+    log(`Listening on port ${app.get('port')}`);
 });
 
+// start listening on provided port
 server.listen(app.get('port'));
