@@ -1,9 +1,13 @@
+import path from 'path';
+import debug from 'debug';
 import express from 'express';
+import history from 'connect-history-api-fallback';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 
-import routes from './routes/index';
+import apiTest from './routes/apiTest';
+import apiNotExists from './routes/apiNotExists';
 
 var app = express();
 
@@ -12,6 +16,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/', routes);
+app.use('/api', apiTest);
+app.use('/api', apiNotExists);
+
+app.use(history({ verbose: true, logger: debug('myapp:history') }));
+app.use(express.static(path.join(__dirname, '../', 'public')));
 
 export default app;

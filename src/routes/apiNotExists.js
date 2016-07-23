@@ -2,8 +2,9 @@ import { Router } from 'express';
 
 var router = Router();
 
-router.get('/', (req, res) => {
-    res.send('Hello World');
+router.use((req, res) => {
+    res.status(500);
+    res.send('API does not exist');
 });
 
 module.exports = router;
