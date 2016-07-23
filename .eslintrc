@@ -64,7 +64,6 @@
     "env": {
         "es6": true,
         "node": true,
-        "browser": true,
         "commonjs": true,
         "mocha": true
     },
