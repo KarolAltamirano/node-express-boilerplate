@@ -10,4 +10,4 @@ router.use((req: Object, res: Object) => {
     res.send('API does not exist');
 });
 
-module.exports = router;
+export default router;

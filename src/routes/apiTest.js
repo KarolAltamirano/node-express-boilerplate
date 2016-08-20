@@ -9,4 +9,4 @@ router.get('/test', (req: Object, res: Object) => {
     res.send('Hello from test API');
 });
 
-module.exports = router;
+export default router;
