@@ -1,7 +1,13 @@
 [ignore]
+public
+build
 
 [include]
 
 [libs]
+definitions
 
 [options]
+
+[version]
+0.30.0
