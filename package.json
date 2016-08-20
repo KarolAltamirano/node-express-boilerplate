@@ -11,7 +11,8 @@
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
     "test": "mocha --compilers js:babel-register test/**/*.spec.js",
-    "test-watch": "npm run test -- -w"
+    "test-watch": "npm run test -- -w",
+    "flow": "flow"
   },
   "betterScripts": {
     "start": {
@@ -28,7 +29,7 @@
       }
     },
     "build": {
-      "command": "npm run clean && npm run lint && babel src -d dist",
+      "command": "npm run clean && npm run lint && npm run flow && babel src -d dist",
       "env": {
         "NODE_ENV": "production"
       }
