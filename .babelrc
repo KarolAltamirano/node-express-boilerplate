@@ -1,4 +1,8 @@
 {
     "presets": ["es2015-node4", "stage-0"],
-    "plugins": ["transform-flow-strip-types"]
+    "plugins": [
+        ["typecheck", { "disable": { "production": true } }],
+        "syntax-flow",
+        "transform-flow-strip-types"
+    ]
 }
