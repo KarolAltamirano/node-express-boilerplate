@@ -8,6 +8,8 @@ build
 definitions
 
 [options]
+module.use_strict=true
+munge_underscores=true
 
 [version]
 0.30.0
