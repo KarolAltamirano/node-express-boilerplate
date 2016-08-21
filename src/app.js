@@ -1,3 +1,5 @@
+// @flow
+
 import path from 'path';
 import debug from 'debug';
 import express from 'express';

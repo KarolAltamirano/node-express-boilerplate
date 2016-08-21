@@ -1,0 +1,15 @@
+[ignore]
+public
+build
+
+[include]
+
+[libs]
+definitions
+
+[options]
+module.use_strict=true
+munge_underscores=true
+
+[version]
+0.30.0
