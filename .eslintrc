@@ -10,7 +10,7 @@
         }],
         "camelcase": [2, {"properties": "always"}],
         "wrap-iife": [2, "inside"],
-        "new-cap": [2, { "capIsNewExceptions": [] }],
+        "new-cap": [2, { "capIsNewExceptions": ["Router"] }],
         "no-invalid-this": 2,
         "global-require": 0,
         "comma-dangle": [2, "never"],

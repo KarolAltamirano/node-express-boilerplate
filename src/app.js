@@ -15,7 +15,7 @@ import apiTest from './routes/apiTest';
 import apiNotExists from './routes/apiNotExists';
 
 // create express app
-var app = express();
+const app = express();
 
 // add middlewares
 app.use(compression());

@@ -11,10 +11,10 @@ import app from '../app';
 app.set('port', process.env.PORT || 5000);
 
 // create logger
-var log = debug('myapp:server');
+const log = debug('myapp:server');
 
 // create HTTP server
-var server = http.createServer(app);
+const server = http.createServer(app);
 
 // set HTTP server event listener
 server.on('listening', () => {

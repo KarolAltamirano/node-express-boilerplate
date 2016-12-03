@@ -2,7 +2,7 @@
 
 import { Router } from 'express';
 
-var router = Router();
+const router = Router();
 
 // GET test API
 router.get('/test', (req: Object, res: Object) => {
