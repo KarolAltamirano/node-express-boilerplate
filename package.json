@@ -7,11 +7,11 @@
     "start": "better-npm-run start",
     "clean": "rimraf dist",
     "lint": "esw src/**/*",
-    "lint-watch": "npm run lint -- -w",
+    "lint:watch": "npm run lint -- -w",
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
     "test": "mocha --compilers js:babel-register test/**/*.spec.js",
-    "test-watch": "npm run test -- -w",
+    "test:watch": "npm run test -- -w",
     "flow": "flow"
   },
   "betterScripts": {
