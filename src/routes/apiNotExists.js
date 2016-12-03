@@ -2,7 +2,7 @@
 
 import { Router } from 'express';
 
-var router = Router();
+const router = Router();
 
 // fallback for not existing API
 router.use((req: Object, res: Object) => {
