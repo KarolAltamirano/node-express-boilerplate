@@ -9,6 +9,7 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
+import helmet from 'helmet';
 
 // import routes
 import apiTest from './routes/apiTest';
@@ -19,6 +20,7 @@ const app = express();
 
 // add middlewares
 app.use(compression());
+app.use(helmet());
 app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
