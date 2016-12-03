@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.1.2 - 2016-12-03
+- Update packages
+- Rename watch tasks
+- Use airbnb eslint
+- Add helmet
+
 ## v0.1.1 - 2016-08-21
 - Add FlowType
 
