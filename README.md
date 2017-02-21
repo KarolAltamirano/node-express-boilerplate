@@ -11,6 +11,7 @@
 - git clone --depth 1 https://github.com/KarolAltamirano/node-express-boilerplate.git new-project
 - cd new-project
 - remove existing .git folder and CHANGELOG.md and LICENSE.md files
+- write app name and version to package.json
 - npm install
 - npm run dev
 
