@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 // set HTTP server event listener
 server.on('listening', () => {
-    log(`Listening on port ${app.get('port')}`);
+    log(`Listening on port ${app.get('port').toString()}`);
 });
 
 // start listening on provided port
