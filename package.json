@@ -6,13 +6,15 @@
   "scripts": {
     "start": "better-npm-run start",
     "clean": "rimraf dist",
-    "lint": "esw src/**/*",
+    "lint": "esw 'src/**/*'",
     "lint:watch": "npm run lint -- -w",
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
-    "test": "mocha --compilers js:babel-register test/**/*.spec.js",
+    "test": "mocha --compilers js:babel-register 'test/**/*.spec.js'",
     "test:watch": "npm run test -- -w",
-    "flow": "flow"
+    "flow": "flow",
+    "hooks:install": "node ./node_modules/husky/bin/install",
+    "precommit": "npm run lint && npm run flow && npm run test"
   },
   "betterScripts": {
     "start": {
@@ -29,7 +31,7 @@
       }
     },
     "build": {
-      "command": "npm run clean && npm run lint && npm run flow && babel src -d dist",
+      "command": "npm run clean && npm run lint && npm run flow && npm run test && babel src -d dist",
       "env": {
         "NODE_ENV": "production"
       }
@@ -65,6 +67,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-watch": "^3.0.0",
     "flow-bin": "^0.39.0",
+    "husky": "^0.13.1",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.0",

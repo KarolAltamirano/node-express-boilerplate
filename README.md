@@ -12,6 +12,7 @@
 - cd new-project
 - remove existing .git folder and CHANGELOG.md and LICENSE.md files
 - write app name and version to package.json
+- git init
 - npm install
 - npm run dev
 
@@ -30,13 +31,14 @@
 
 # NPM tasks
 ```
-npm start          : start production built app
-npm run clean      : clean dist folder
-npm run lint       : run JavaScript linter
-npm run lint:watch : run JavaScript linter in watch mode
-npm run dev        : start development
-npm run build      : build for production
-npm test           : run unit tests
-npm run test:watch : run unit tests in watch mode
-mpm run flow       : run flow
+npm start             : start production built app
+npm run clean         : clean dist folder
+npm run lint          : run JavaScript linter
+npm run lint:watch    : run JavaScript linter in watch mode
+npm run dev           : start development
+npm run build         : build for production
+npm test              : run unit tests
+npm run test:watch    : run unit tests in watch mode
+npm run flow          : run flow
+npm run hooks:install : install git hooks
 ```
