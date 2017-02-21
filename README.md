@@ -1,20 +1,28 @@
 # Node Express Boilerplate
 
-#Features
-- ES6 + Stage 0
+# Features
+- ES7+
 - Babel
 - Flow
 - ESLint
 - Express
 
-# Quick start
-- git clone --depth 1 https://github.com/KarolAltamirano/node-express-boilerplate.git new-project
-- cd new-project
-- remove existing .git folder and CHANGELOG.md and LICENSE.md files
-- write app name and version to package.json
-- git init
-- npm install
-- npm run dev
+# Quick start of new project
+- clone boilerplate by running
+  `git clone --depth 1 https://github.com/KarolAltamirano/node-express-boilerplate.git new-project`
+- go to project folder `cd new-project`
+- remove existing `.git` folder and `CHANGELOG.md` and `LICENSE.md` files
+- write app name and version to `package.json`
+- run `git init`
+- run `npm install`
+- run `npm run dev` for development
+- build production version by running `npm run build`
+
+# Existing project
+- clone repository
+- run `npm install`
+- run `npm run dev` for development
+- build production version by running `npm run build`
 
 # Requirements
 - NodeJS v4.0 or newer
@@ -40,5 +48,7 @@ npm run build         : build for production
 npm test              : run unit tests
 npm run test:watch    : run unit tests in watch mode
 npm run flow          : run flow
+npm run check:all     : run lint flow and test tasks
+npm run leasot        : print all TODOs and FIXMEs to the console
 npm run hooks:install : install git hooks
 ```
