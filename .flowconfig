@@ -5,8 +5,6 @@ build
 [include]
 
 [libs]
-definitions
 
 [options]
 module.use_strict=true
-munge_underscores=true
