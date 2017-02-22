@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.1.5 - 2017-02-23
+- Add source maps for production build
+- Add winston logger
+- Bug fixes
+
 ## v0.1.4 - 2017-02-22
 - Add flow-typed
 
