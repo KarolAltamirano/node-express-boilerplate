@@ -1,7 +1,5 @@
 // @flow
 
-import 'babel-polyfill';
-
 import debug from 'debug';
 import http from 'http';
 

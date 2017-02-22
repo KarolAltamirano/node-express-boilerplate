@@ -10,6 +10,8 @@ import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
 import helmet from 'helmet';
+import winston from 'winston';
+import expressWinston from 'express-winston';
 
 // import routes
 import apiTest from './routes/apiTest';
@@ -26,6 +28,11 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// requests log
+app.use(expressWinston.logger({
+    transports: [new winston.transports.File({ filename: 'logs-logger.log' })]
+}));
 
 // add API routes
 app.use('/api', apiTest);

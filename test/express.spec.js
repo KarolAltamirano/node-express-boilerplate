@@ -20,7 +20,7 @@ describe('Express server', () => {
     it('should return `API does not exist` when requesting GET /api/invalidendpoint', (done: Function) => {
         request(app)
             .get('/api/invalidendpoint')
-            .expect(500)
+            .expect(404)
             .expect('API does not exist', done);
     });
 });

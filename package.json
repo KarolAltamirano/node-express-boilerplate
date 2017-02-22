@@ -1,6 +1,6 @@
 {
   "name": "node-express-boilerplate",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "main": "dist/bin/main.js",
   "scripts": {
@@ -33,14 +33,13 @@
       }
     },
     "build": {
-      "command": "npm run leasot && npm run check:all && npm run clean && babel src -d dist",
+      "command": "npm run leasot && npm run check:all && npm run clean && babel src -s -d dist",
       "env": {
         "NODE_ENV": "production"
       }
     }
   },
   "dependencies": {
-    "babel-polyfill": "^6.23.0",
     "better-npm-run": "0.0.14",
     "body-parser": "^1.16.1",
     "compression": "^1.6.2",
@@ -49,8 +48,10 @@
     "cors": "^2.8.1",
     "debug": "^2.6.1",
     "express": "^4.14.1",
+    "express-winston": "^2.2.0",
     "helmet": "^3.4.0",
-    "morgan": "^1.8.1"
+    "morgan": "^1.8.1",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
@@ -59,7 +60,7 @@
     "babel-plugin-syntax-flow": "^6.18.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-typecheck": "^3.9.0",
-    "babel-preset-es2015-node4": "^2.1.1",
+    "babel-preset-node6": "^11.0.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.23.0",
     "cash-true": "0.0.2",
@@ -77,5 +78,9 @@
     "rimraf": "^2.6.0",
     "sinon": "^1.17.7",
     "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3.3"
   }
 }
