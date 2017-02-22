@@ -33,7 +33,7 @@
       }
     },
     "build": {
-      "command": "npm run leasot && npm run check:all && npm run clean && babel src -d dist",
+      "command": "npm run leasot && npm run check:all && npm run clean && babel src -s -d dist",
       "env": {
         "NODE_ENV": "production"
       }
