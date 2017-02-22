@@ -25,7 +25,7 @@
 - build production version by running `npm run build`
 
 # Requirements
-- NodeJS v4.0 or newer
+- NodeJS v6.0 or newer
 - npm v3.3 or newer
 
 # Folders structure

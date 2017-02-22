@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 - Add source maps for production build
 - Add winston logger
 - Bug fixes
+- Update min supported version to Node 6
 
 ## v0.1.4 - 2017-02-22
 - Add flow-typed
