@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.1.8 - 2017-02-23
+- Clean public folder
+
 ## v0.1.7 - 2017-02-23
 - Update gitattributes
 
