@@ -13,6 +13,8 @@
 - go to project folder `cd new-project`
 - remove existing `.git` folder and `CHANGELOG.md` and `LICENSE.md` files
 - write app name and version to `package.json`
+- run `npm install -g flow-typed` to install `flow-typed`
+- run `flow-typed install` to install type definitions
 - run `git init`
 - run `npm install`
 - run `npm run dev` for development
