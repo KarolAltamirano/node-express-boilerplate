@@ -3,35 +3,15 @@
 
 # Text files - normalize line endings to LF on checkout
 *.js text eol=lf
-*.scss text eol=lf
-*.html text eol=lf
-*.css text eol=lf
-*.ejs text eol=lf
 *.yml text eol=lf
 *.json text eol=lf
 *.md text eol=lf
 
 .babelrc text eol=lf
 .editorconfig text eol=lf
+.eslintignore text eof=lf
 .eslintrc text eol=lf
+.flowconfig text eol=lf
 .gitattributes text eol=lf
 .gitignore text eol=lf
 .gitkeep text eol=lf
-.modernizrrc text eol=lf
-.flowconfig text eol=lf
-
-# Binary files
-*.ico binary
-*.jpg binary
-*.gif binary
-*.png binary
-
-*.eot binary
-*.ttf binary
-*.woff binary
-*.woff2 binary
-
-*.mp3 binary
-*.mp4 binary
-*.webm binary
-*.ogg binary
