@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.1.9 - 2017-02-25
+- Remove wrong test example
+- Add dist folder to .gitignore
+
 ## v0.1.8 - 2017-02-23
 - Clean public folder
 
