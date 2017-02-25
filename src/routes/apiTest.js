@@ -6,7 +6,7 @@ const router = Router();
 
 // GET test API
 router.get('/test', (req: Object, res: Object) => {
-    res.send('Hello from test API');
+    res.send('Hello from test API\n');
 });
 
 export default router;

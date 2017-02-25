@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// requests log
+// requests logging
 app.use(expressWinston.logger({
     transports: [new winston.transports.File({ filename: 'logs-logger.log' })]
 }));
@@ -41,5 +41,10 @@ app.use('/api', apiNotExists);
 // add static middleware to serve static files
 app.use(history({ verbose: true, logger: debug('myapp:history') }));
 app.use(express.static(path.join(__dirname, '../', 'public')));
+
+// error logging
+app.use(expressWinston.errorLogger({
+    transports: [new winston.transports.File({ filename: 'logs-error-logger.log' })]
+}));
 
 export default app;
