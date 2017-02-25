@@ -1,6 +1,6 @@
 {
   "name": "node-express-boilerplate",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": true,
   "main": "dist/bin/main.js",
   "scripts": {
@@ -13,8 +13,8 @@
     "test": "mocha --compilers js:babel-register 'test/**/*.spec.js'",
     "test:watch": "npm run test -- -w",
     "flow": "flow",
-    "check:all": "npm run lint && npm run flow && npm run test",
     "leasot": "leasot '{src,test}/**/*.js' || true",
+    "check:all": "npm run lint && npm run flow && npm run test",
     "hooks:install": "node ./node_modules/husky/bin/install",
     "precommit": "npm run check:all"
   },
@@ -26,14 +26,14 @@
       }
     },
     "dev": {
-      "command": "npm run leasot && npm run clean && nodemon --exec babel-node -- src/bin/main.js",
+      "command": "npm run check:all && npm run clean && nodemon --exec babel-node -- src/bin/main.js",
       "env": {
         "NODE_ENV": "development",
         "DEBUG": "myapp:*"
       }
     },
     "build": {
-      "command": "npm run leasot && npm run check:all && npm run clean && babel src -s -d dist",
+      "command": "npm run check:all && npm run clean && babel src -s -d dist",
       "env": {
         "NODE_ENV": "production"
       }
