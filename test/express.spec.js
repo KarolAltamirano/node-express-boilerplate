@@ -8,13 +8,13 @@ describe('Express server', () => {
         request(app)
             .get('/api/test')
             .expect(200)
-            .expect('Hello from test API', done);
+            .expect('Hello from test API\n', done);
     });
 
     it('should return `API does not exist` when requesting GET /api/invalidendpoint', (done: Function) => {
         request(app)
             .get('/api/invalidendpoint')
             .expect(404)
-            .expect('API does not exist', done);
+            .expect('API does not exist\n', done);
     });
 });
