@@ -1,7 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## v0.0.10 - 2017-02-25
+## v0.1.11 - 2017-02-26
+- Add error logging
+
+## v0.1.10 - 2017-02-25
 - Add check:all task to dev task
 - Remove leasot task from dev and build tasks
 
