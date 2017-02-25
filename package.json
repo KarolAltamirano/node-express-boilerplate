@@ -14,7 +14,7 @@
     "test:watch": "npm run test -- -w",
     "flow": "flow",
     "leasot": "leasot '{src,test}/**/*.js' || true",
-    "check:all": "npm run leasot && npm run lint && npm run flow && npm run test",
+    "check:all": "npm run lint && npm run flow && npm run test",
     "hooks:install": "node ./node_modules/husky/bin/install",
     "precommit": "npm run check:all"
   },

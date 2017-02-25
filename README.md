@@ -51,6 +51,6 @@ npm test              : run unit tests
 npm run test:watch    : run unit tests in watch mode
 npm run flow          : run flow
 npm run leasot        : print all TODOs and FIXMEs to the console
-npm run check:all     : run 'leasot', 'lint', 'flow' and 'test' tasks
+npm run check:all     : run 'lint', 'flow' and 'test' tasks
 npm run hooks:install : install git hooks
 ```
