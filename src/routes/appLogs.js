@@ -12,7 +12,7 @@ import sha1 from 'sha1';
 const logsLogger = expressWinston.logger({
     transports: [new winston.transports.File({
         filename: './logs/logs-logger.log',
-        maxsize: 5000000,
+        maxsize: 2000000,
         maxFiles: 5
     })]
 });
@@ -21,7 +21,7 @@ const logsLogger = expressWinston.logger({
 const logsErrorLogger = expressWinston.errorLogger({
     transports: [new winston.transports.File({
         filename: './logs/logs-error-logger.log',
-        maxsize: 5000000,
+        maxsize: 2000000,
         maxFiles: 5
     })]
 });
