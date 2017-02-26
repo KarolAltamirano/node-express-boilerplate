@@ -1,5 +1,6 @@
 // @flow
 
+import fs from 'fs';
 import path from 'path';
 import debug from 'debug';
 import express from 'express';
@@ -10,10 +11,9 @@ import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
 import helmet from 'helmet';
-import winston from 'winston';
-import expressWinston from 'express-winston';
 
 // import routes
+import { logsLogger, logsErrorLogger, logsServe } from './routes/appLogs';
 import apiTest from './routes/apiTest';
 import apiNotExists from './routes/apiNotExists';
 
@@ -29,22 +29,26 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// create logs directory if it doesn't exists
+if (!fs.existsSync('./logs')) {
+    fs.mkdirSync('./logs');
+}
+
 // requests logging
-app.use(expressWinston.logger({
-    transports: [new winston.transports.File({ filename: 'logs-logger.log' })]
-}));
+app.use(logsLogger);
 
 // add API routes
 app.use('/api', apiTest);
 app.use('/api', apiNotExists);
+
+// serve logs files
+app.use(logsServe);
 
 // add static middleware to serve static files
 app.use(history({ verbose: true, logger: debug('myapp:history') }));
 app.use(express.static(path.join(__dirname, '../', 'public')));
 
 // error logging
-app.use(expressWinston.errorLogger({
-    transports: [new winston.transports.File({ filename: 'logs-error-logger.log' })]
-}));
+app.use(logsErrorLogger);
 
 export default app;
