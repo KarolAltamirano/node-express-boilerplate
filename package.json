@@ -40,6 +40,7 @@
     }
   },
   "dependencies": {
+    "basicauth-middleware": "^2.0.0",
     "better-npm-run": "0.0.14",
     "body-parser": "^1.16.1",
     "compression": "^1.6.2",
@@ -47,10 +48,13 @@
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.1",
     "debug": "^2.6.1",
+    "dotenv": "^4.0.0",
     "express": "^4.14.1",
     "express-winston": "^2.2.0",
     "helmet": "^3.4.0",
     "morgan": "^1.8.1",
+    "serve-index": "^1.8.0",
+    "sha1": "^1.1.1",
     "winston": "^2.3.1"
   },
   "devDependencies": {
