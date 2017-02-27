@@ -1,9 +1,13 @@
 // @flow
 
-import debug from 'debug';
 import http from 'http';
+import dotenv from 'dotenv';
+import debug from 'debug';
 
 import app from '../app';
+
+// load environment variables from a .env file
+dotenv.config();
 
 // set port from environment
 app.set('port', process.env.PORT || 5000);

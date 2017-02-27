@@ -26,6 +26,18 @@
 - run `npm run dev` for development
 - build production version by running `npm run build`
 
+# Configure credentials for accessing logs
+- create `.env` file in root directory of your project
+- define `LOGS_USERNAME` variable inside it
+- define `LOGS_PASSWORD` variable inside it that contains `sha1` encrypted password
+- to access log files navigate to `/logs` route in a browser
+
+Example `.env` file:
+```
+LOGS_USERNAME=admin
+LOGS_PASSWORD=40bd001563085fc35165329ea1ff5c5ecbdbbeef
+```
+
 # Requirements
 - NodeJS v6.0 or newer
 - npm v3.3 or newer
@@ -33,10 +45,12 @@
 # Folders structure
 ```
 .
-├─── dist   : built app
-├─── public : built frontend app
-├─── src    : source files
-└─── test   : unit tests
+├─── flow-typed : flow type definitions
+├─── logs       : app log files (do not push to source control)
+├─── dist       : built app (do not push to source control)
+├─── public     : built frontend app
+├─── src        : source files
+└─── test       : unit tests
 ```
 
 # NPM tasks

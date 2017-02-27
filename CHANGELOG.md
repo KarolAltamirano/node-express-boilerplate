@@ -1,7 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## v0.0.10 - 2017-02-25
+## v0.1.11 - 2017-02-28
+- Add error logging
+- Update `.gitignore` file
+- Add `.env` file support
+- Create password protected `/logs` route
+
+## v0.1.10 - 2017-02-25
 - Add check:all task to dev task
 - Remove leasot task from dev and build tasks
 
