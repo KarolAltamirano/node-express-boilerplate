@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.2.0 - 2017-03-01
+- Replace typecheck with flow-runtime
+- Update packages
+
 ## v0.1.11 - 2017-02-28
 - Add error logging
 - Update `.gitignore` file
