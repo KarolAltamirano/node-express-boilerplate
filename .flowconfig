@@ -1,6 +1,5 @@
 [ignore]
-public
-build
+.*/node_modules/babel-plugin-flow-runtime/.*
 
 [include]
 
