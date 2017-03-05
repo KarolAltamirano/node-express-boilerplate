@@ -17,9 +17,14 @@
         "no-plusplus": 0,
         "no-return-assign": 0,
         "import/no-extraneous-dependencies": 0,
-        "flowtype/require-parameter-type": 2,
-        "flowtype/require-return-type": [2, "always", { "annotateUndefined": "never" }],
-        "flowtype/require-valid-file-annotation": [2, "always"],
+        "flowtype/require-parameter-type": [2, {
+            "excludeArrowFunctions": "expressionsOnly"
+        }],
+        "flowtype/require-return-type": [2, "always", {
+            "annotateUndefined": "never",
+            "excludeArrowFunctions": "expressionsOnly"
+        }],
+        "flowtype/require-valid-file-annotation": [2, "always", { "annotationStyle": "line" }],
         "flowtype/type-id-match": [2, "^([A-Z][a-z0-9]+)+Type$"]
     },
 
