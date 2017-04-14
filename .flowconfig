@@ -1,9 +1,9 @@
 [ignore]
-.*/node_modules/babel-plugin-flow-runtime/.*
 
 [include]
 
 [libs]
+flow-typed/.*
 
 [options]
 module.use_strict=true
