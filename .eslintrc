@@ -2,7 +2,6 @@
   "parser": "babel-eslint",
 
   "rules": {
-    "no-console": 0,
     "camelcase": [2, {"properties": "always"}],
     "wrap-iife": [2, "inside"],
     "new-cap": [2, { "capIsNewExceptions": ["Router"] }],
@@ -17,7 +16,13 @@
     }],
     "no-plusplus": 0,
     "no-return-assign": 0,
+    "no-unused-expressions": [2, {
+      allowShortCircuit: true,
+      allowTernary: true
+    }],
     "import/no-extraneous-dependencies": 0,
+    "flowtype/no-primitive-constructor-types": 2,
+    "flowtype/object-type-delimiter": 2,
     "flowtype/require-parameter-type": [2, {
       "excludeArrowFunctions": "expressionsOnly"
     }],
@@ -26,7 +31,8 @@
       "excludeArrowFunctions": "expressionsOnly"
     }],
     "flowtype/require-valid-file-annotation": [2, "always", { "annotationStyle": "line" }],
-    "flowtype/type-id-match": [2, "^([A-Z][a-z0-9]+)+Type$"]
+    "flowtype/type-id-match": [2, "^([A-Z][a-z0-9]+)+Type$"],
+    "flowtype/semi": 2
   },
 
   "env": {
