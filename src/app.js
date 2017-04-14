@@ -31,7 +31,7 @@ app.use(cookieParser());
 
 // create logs directory if it doesn't exists
 if (!fs.existsSync('./logs')) {
-    fs.mkdirSync('./logs');
+  fs.mkdirSync('./logs');
 }
 
 // requests logging

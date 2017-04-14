@@ -1,46 +1,41 @@
 {
-    "parser": "babel-eslint",
+  "parser": "babel-eslint",
 
-    "rules": {
-        "no-console": 0,
-        "indent": [2, 4, {
-            "SwitchCase": 1,
-            "FunctionDeclaration": { "parameters": 1, "body": 1 },
-            "FunctionExpression": { "parameters": 1, "body": 1 }
-        }],
-        "camelcase": [2, {"properties": "always"}],
-        "wrap-iife": [2, "inside"],
-        "new-cap": [2, { "capIsNewExceptions": ["Router"] }],
-        "no-invalid-this": 2,
-        "global-require": 0,
-        "comma-dangle": [2, "never"],
-        "no-plusplus": 0,
-        "no-return-assign": 0,
-        "import/no-extraneous-dependencies": 0,
-        "flowtype/require-parameter-type": [2, {
-            "excludeArrowFunctions": "expressionsOnly"
-        }],
-        "flowtype/require-return-type": [2, "always", {
-            "annotateUndefined": "never",
-            "excludeArrowFunctions": "expressionsOnly"
-        }],
-        "flowtype/require-valid-file-annotation": [2, "always", { "annotationStyle": "line" }],
-        "flowtype/type-id-match": [2, "^([A-Z][a-z0-9]+)+Type$"]
-    },
+  "rules": {
+    "no-console": 0,
+    "camelcase": [2, {"properties": "always"}],
+    "wrap-iife": [2, "inside"],
+    "new-cap": [2, { "capIsNewExceptions": ["Router"] }],
+    "no-invalid-this": 2,
+    "global-require": 0,
+    "comma-dangle": [2, "never"],
+    "no-plusplus": 0,
+    "no-return-assign": 0,
+    "import/no-extraneous-dependencies": 0,
+    "flowtype/require-parameter-type": [2, {
+      "excludeArrowFunctions": "expressionsOnly"
+    }],
+    "flowtype/require-return-type": [2, "always", {
+      "annotateUndefined": "never",
+      "excludeArrowFunctions": "expressionsOnly"
+    }],
+    "flowtype/require-valid-file-annotation": [2, "always", { "annotationStyle": "line" }],
+    "flowtype/type-id-match": [2, "^([A-Z][a-z0-9]+)+Type$"]
+  },
 
-    "env": {
-        "node": true,
-        "mocha": true
-    },
+  "env": {
+    "node": true,
+    "mocha": true
+  },
 
-    "plugins": [
-        "flowtype"
-    ],
+  "plugins": [
+    "flowtype"
+  ],
 
-    "extends": [
-        "airbnb-base",
-        "plugin:flowtype/recommended"
-    ],
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended"
+  ],
 
-    "globals": {}
+  "globals": {}
 }

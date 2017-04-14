@@ -1,7 +1,7 @@
 {
-    "presets": ["node6", "stage-0"],
-    "plugins": [
-        "transform-flow-strip-types",
-        "flow-runtime"
-    ]
+  "presets": ["node6", "stage-0"],
+  "plugins": [
+    "transform-flow-strip-types",
+    "flow-runtime"
+  ]
 }
