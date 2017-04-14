@@ -13,8 +13,8 @@ const logsLogger = expressWinston.logger({
   transports: [new winston.transports.File({
     filename: './logs/logs-logger.log',
     maxsize: 2000000,
-    maxFiles: 5
-  })]
+    maxFiles: 5,
+  })],
 });
 
 // error logger
@@ -22,8 +22,8 @@ const logsErrorLogger = expressWinston.errorLogger({
   transports: [new winston.transports.File({
     filename: './logs/logs-error-logger.log',
     maxsize: 2000000,
-    maxFiles: 5
-  })]
+    maxFiles: 5,
+  })],
 });
 
 // serve logs files
@@ -47,5 +47,5 @@ logsServe.use('/logs',
 export {
   logsLogger,
   logsErrorLogger,
-  logsServe
+  logsServe,
 };
