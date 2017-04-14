@@ -7,16 +7,16 @@
     "start": "better-npm-run start",
     "clean": "rimraf dist",
     "lint": "esw 'src/**/*'",
-    "lint:watch": "npm run lint -- -w",
+    "lint:watch": "yarn run lint -- -w",
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
     "test": "mocha --compilers js:babel-register 'test/**/*.spec.js'",
-    "test:watch": "npm run test -- -w",
+    "test:watch": "yarn run test -- -w",
     "flow": "flow",
     "leasot": "leasot '{src,test}/**/*.js' || true",
-    "check:all": "npm run lint && npm run flow && npm run test",
+    "check:all": "yarn run lint && yarn run flow && yarn run test",
     "hooks:install": "node ./node_modules/husky/bin/install",
-    "precommit": "npm run check:all"
+    "precommit": "yarn run check:all"
   },
   "betterScripts": {
     "start": {
@@ -26,14 +26,14 @@
       }
     },
     "dev": {
-      "command": "npm run check:all && npm run clean && nodemon --exec babel-node -- src/bin/main.js",
+      "command": "yarn run check:all && yarn run clean && nodemon --exec babel-node -- src/bin/main.js",
       "env": {
         "NODE_ENV": "development",
         "DEBUG": "myapp:*"
       }
     },
     "build": {
-      "command": "npm run check:all && npm run clean && babel src -s -d dist",
+      "command": "yarn run check:all && yarn run clean && babel src -s -d dist",
       "env": {
         "NODE_ENV": "production"
       }
