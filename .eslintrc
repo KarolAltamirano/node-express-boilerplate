@@ -8,31 +8,19 @@
     "no-invalid-this": 2,
     "global-require": 0,
     "comma-dangle": [2, {
-      arrays: "always-multiline",
-      objects: "always-multiline",
-      imports: "always-multiline",
-      exports: "always-multiline",
-      functions: "never"
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
     }],
     "no-plusplus": 0,
     "no-return-assign": 0,
     "no-unused-expressions": [2, {
-      allowShortCircuit: true,
-      allowTernary: true
+      "allowShortCircuit": true,
+      "allowTernary": true
     }],
-    "import/no-extraneous-dependencies": 0,
-    "flowtype/no-primitive-constructor-types": 2,
-    "flowtype/object-type-delimiter": 2,
-    "flowtype/require-parameter-type": [2, {
-      "excludeArrowFunctions": "expressionsOnly"
-    }],
-    "flowtype/require-return-type": [2, "always", {
-      "annotateUndefined": "never",
-      "excludeArrowFunctions": "expressionsOnly"
-    }],
-    "flowtype/require-valid-file-annotation": [2, "always", { "annotationStyle": "line" }],
-    "flowtype/type-id-match": [2, "^([A-Z][a-z0-9]+)+Type$"],
-    "flowtype/semi": 2
+    "import/no-extraneous-dependencies": 0
   },
 
   "env": {
@@ -40,13 +28,8 @@
     "mocha": true
   },
 
-  "plugins": [
-    "flowtype"
-  ],
-
   "extends": [
-    "airbnb-base",
-    "plugin:flowtype/recommended"
+    "airbnb-base"
   ],
 
   "globals": {}
