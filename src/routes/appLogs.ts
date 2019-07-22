@@ -1,5 +1,3 @@
-// @flow
-
 import path from 'path';
 import express, { Router } from 'express';
 import serveIndex from 'serve-index';
