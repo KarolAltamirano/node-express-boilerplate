@@ -19,6 +19,7 @@
       "allowShortCircuit": true,
       "allowTernary": true
     }],
+    "arrow-parens": [2, "as-needed"],
     "import/no-extraneous-dependencies": 0,
     "@typescript-eslint/indent": [2, 2],
     "@typescript-eslint/explicit-function-return-type": 0

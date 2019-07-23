@@ -6,7 +6,7 @@
   "scripts": {
     "start": "better-npm-run start",
     "clean": "rimraf dist",
-    "lint": "esw 'src/**/*'",
+    "lint": "esw '{src,test}/**/*.ts'",
     "lint:watch": "npm run lint -- -w",
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
@@ -25,14 +25,14 @@
       }
     },
     "dev": {
-      "command": "npm run check:all && npm run clean && nodemon --watch 'src/**/*.ts' --exec ts-node src/bin/main.js",
+      "command": "npm run clean && npm run check:all && nodemon --watch 'src/**/*.ts' --exec ts-node src/bin/main.js",
       "env": {
         "NODE_ENV": "development",
         "DEBUG": "myapp:*"
       }
     },
     "build": {
-      "command": "npm run check:all && npm run clean && tsc",
+      "command": "npm run clean && npm run check:all && tsc",
       "env": {
         "NODE_ENV": "production"
       }
