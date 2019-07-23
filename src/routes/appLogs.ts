@@ -27,15 +27,16 @@ const logsErrorLogger = expressWinston.errorLogger({
 // serve logs files
 const logsServe = Router();
 
-logsServe.use('/logs',
+logsServe.use(
+  '/logs',
   basicauth((username: string, password: string): boolean => {
     if (!username || !password) {
       return false;
     }
 
     return (
-      username === process.env.LOGS_USERNAME &&
-      sha1(password) === process.env.LOGS_PASSWORD
+      username === process.env.LOGS_USERNAME
+      && sha1(password) === process.env.LOGS_PASSWORD
     );
   }),
   express.static(path.join(__dirname, '../../', 'logs')),

@@ -1,21 +1,21 @@
 {
   "name": "node-express-boilerplate",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "private": true,
   "main": "dist/bin/main.js",
   "scripts": {
     "start": "better-npm-run start",
     "clean": "rimraf dist",
     "lint": "esw 'src/**/*'",
-    "lint:watch": "yarn run lint -- -w",
+    "lint:watch": "npm run lint -- -w",
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
-    "test": "mocha --compilers js:babel-register 'test/**/*.spec.js'",
-    "test:watch": "yarn run test -- -w",
-    "leasot": "leasot '{src,test}/**/*.js' || true",
-    "check:all": "yarn run lint && yarn run test",
+    "test": "mocha --require ts-node/register 'test/**/*.spec.ts'",
+    "test:watch": "npm test -- -w",
+    "leasot": "leasot '{src,test}/**/*.ts' || true",
+    "check:all": "npm run lint && npm test",
     "hooks:install": "node ./node_modules/husky/bin/install",
-    "precommit": "yarn run check:all"
+    "precommit": "npm run check:all"
   },
   "betterScripts": {
     "start": {
@@ -25,14 +25,14 @@
       }
     },
     "dev": {
-      "command": "yarn run check:all && yarn run clean && nodemon --exec babel-node -- src/bin/main.js",
+      "command": "npm run check:all && npm run clean && nodemon --watch 'src/**/*.ts' --exec ts-node src/bin/main.js",
       "env": {
         "NODE_ENV": "development",
         "DEBUG": "myapp:*"
       }
     },
     "build": {
-      "command": "yarn run check:all && yarn run clean && babel src -s -d dist",
+      "command": "npm run check:all && npm run clean && tsc",
       "env": {
         "NODE_ENV": "production"
       }
@@ -49,7 +49,7 @@
     "debug": "^2.6.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
-    "express-winston": "^2.3.0",
+    "express-winston": "^3.2.1",
     "helmet": "^3.5.0",
     "morgan": "^1.8.1",
     "serve-index": "^1.8.0",
@@ -73,25 +73,22 @@
     "@types/serve-index": "^1.7.29",
     "@types/sha1": "^1.1.2",
     "@types/supertest": "^2.0.8",
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.2",
-    "babel-preset-node6": "^11.0.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.24.1",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
     "cash-true": "0.0.2",
     "chai": "^3.5.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.1.3",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-watch": "^3.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-watch": "^6.0.0",
     "husky": "^0.13.3",
     "leasot": "^4.3.1",
-    "mocha": "^3.2.0",
+    "mocha": "^6.2.0",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1",
     "sinon": "^2.1.0",
     "supertest": "^3.0.0",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   },
   "engines": {
