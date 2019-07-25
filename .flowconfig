@@ -1,9 +1,0 @@
-[ignore]
-
-[include]
-
-[libs]
-flow-typed/.*
-
-[options]
-module.use_strict=true

@@ -1,10 +1,6 @@
-// @flow
-
 import fs from 'fs';
 import path from 'path';
-import debug from 'debug';
 import express from 'express';
-import history from 'connect-history-api-fallback';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
@@ -45,7 +41,6 @@ app.use('/api', apiNotExists);
 app.use(logsServe);
 
 // add static middleware to serve static files
-app.use(history({ verbose: true, logger: debug('myapp:history') }));
 app.use(express.static(path.join(__dirname, '../', 'public')));
 
 // error logging

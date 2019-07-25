@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.4.0 - 2019-07-25
+- Replace Flow with TypeScript
+- Replace yarn with npm
+
 ## v0.3.0 - 2017-04-15
 - Improve flow eslint configuration
 - Use yarn

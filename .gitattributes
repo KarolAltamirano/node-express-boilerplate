@@ -2,7 +2,7 @@
 * text=auto
 
 # Text files - normalize line endings to LF on checkout
-*.js text eol=lf
+*.ts text eol=lf
 *.yml text eol=lf
 *.json text eol=lf
 *.md text eol=lf
@@ -11,7 +11,6 @@
 .editorconfig text eol=lf
 .eslintignore text eof=lf
 .eslintrc text eol=lf
-.flowconfig text eol=lf
 .gitattributes text eol=lf
 .gitignore text eol=lf
 .gitkeep text eol=lf
