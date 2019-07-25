@@ -1,7 +1,7 @@
 # Node Express Boilerplate
 
 # Features
-- Typescript
+- TypeScript
 - ESLint
 - Express
 
