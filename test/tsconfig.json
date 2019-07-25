@@ -1,13 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "ES2016",
-    "module": "commonjs",
-    "sourceMap": true,
-    "outDir": "dist",
-    "strict": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true
-  },
+  "extends": "../tsconfig.json",
   "include": [
     "**/*.spec.ts"
   ]
