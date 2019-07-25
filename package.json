@@ -25,7 +25,7 @@
       }
     },
     "dev": {
-      "command": "npm run clean && npm run check:all && nodemon --watch 'src/**/*.ts' --exec ts-node src/bin/main.js",
+      "command": "npm run clean && npm run check:all && nodemon --watch 'src/**/*.ts' --exec ts-node src/bin/main.ts",
       "env": {
         "NODE_ENV": "development",
         "DEBUG": "myapp:*"
